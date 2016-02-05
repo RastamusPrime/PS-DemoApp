@@ -12,6 +12,8 @@
   function eventController() {
 
     var vm = this;
+    vm.upVoteSession = upVoteSession;
+    vm.downVoteSession = downVoteSession;
 
     vm.event = {
       name: 'Time To Derp',
@@ -49,7 +51,16 @@
 
     }
 
-    
+    function upVoteSession (session)
+    {
+        session.upVoteCount++;
+    };
+
+    function downVoteSession (session)
+    {
+        session.upVoteCount--;
+    };
+
 
   }
 
