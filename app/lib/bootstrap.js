@@ -41,7 +41,7 @@
             }
           , name
 
-        for (name in transEndEventNames){
+        for (name in transEndEventNames  ){
           if (el.style[name] !== undefined) {
             return transEndEventNames[name]
           }

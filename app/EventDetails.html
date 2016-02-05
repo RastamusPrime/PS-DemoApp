@@ -22,8 +22,8 @@
         </ul>
       </div>
     </div>
-    <div ng-controller="eventController as vm" style = "padding-left:20px; padding-right:20px">
-      <img ng-src="{{vm.event.imageUrl}}"; style ="max-width:25%; height:auto"/>
+    <div ng-controller="eventController as vm" style="padding-left:20px; padding-right:20px">
+      <img ng-src="{{vm.event.imageUrl}}" ; style="max-width:25%; height:auto" />
       <div class="row">
         <div class="spann11">
           <h2>{{vm.event.name}}</h2>
@@ -31,18 +31,48 @@
       </div>
       <div class="row">
         <div class="span3">
-          <div><strong>Date:</strong> {{vm.event.date}}</div>
-          <div><strong>Time:</strong> {{vm.event.time}}</div>
-       </div>
-       <div class="span4">
-        <address>
-            <strong>Address:</strong><br>
-            {{vm.event.location.address}}<br>
-            {{vm.event.location.city}}, {{vm.event.location.state}}
-        </address>
-       </div>
-     </div>
-     </div>
+          <div>
+            <strong>Date:</strong> {{vm.event.date}}</div>
+          <div>
+            <strong>Time:</strong> {{vm.event.time}}</div>
+        </div>
+        <div class="span4">
+          <address>
+            <strong>Address:</strong>
+            <br> {{vm.event.location.address}}
+            <br> {{vm.event.location.city}}, {{vm.event.location.state}}
+          </address>
+        </div>
+      </div>
+      <hr>
+      <h3>Sessions</h3>
+      <ul class="thumbnails">
+        <li ng-repeat="session in vm.event.sessions">
+
+          <div class="row session">
+            <div class="span0 well votingWidget">
+              <div class="votingButton" ng-click = "upVoteSession(session)">
+                <i class="icon-chevron-up icon-white"></i>
+              </div>
+              <div class="badge badge-inverse">
+                <div>{{session.upVoteCount}}</div>
+              </div>
+              <div class="votingButton" ng-click = "downVoteSession(session)">
+                <i class="icon-chevron-down"></i>
+              </div>
+            </div>
+            <div class="well span9">
+              <h4 class="well-title">{{session.name}}</h4>
+              <h6 style="margin-top:-10px">{{session.creatorName}}</h6>
+              <span>Duration: {{session.duration}}</span>
+              <br>
+              <span>Level: {{session.level}}</span>
+              <p>{{session.abstract}}</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </body>
 
