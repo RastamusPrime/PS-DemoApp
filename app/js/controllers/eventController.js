@@ -14,13 +14,14 @@
     var vm = this;
     vm.upVoteSession = upVoteSession;
     vm.downVoteSession = downVoteSession;
+    vm.sortOrder =  'name';
 
     vm.event = {
       name: 'Time To Derp',
       date: '1/1/2018',
       time: '4:20 PM',
       location: {
-        address: 'Dirtys Street Corner',
+        address: 'Dirty\'s Street Corner',
         city: 'Portland',
         state: 'OR'
       },
