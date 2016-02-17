@@ -29,7 +29,7 @@
       sessions: [{
         name: 'Hobo Fighting',
         creatorName: 'Pat Smear',
-        duration:'.69hrs',
+        duration: 1,
         level: 'L33T',
         abstract: 'Derp dem vagrants to California!',
         upVoteCount: 3
@@ -37,14 +37,14 @@
       }, {
         name: 'Radon Testing',
         creatorName: 'Ben Dover',
-        duration: 'it done, when i say it done',
+        duration: 2,
         level:'amateur',
         abstract: 'breath till you can\'t breathe no mo\'',
         upVoteCount: 2
       }, {
         name: 'Bernie Sanders Moshing',
         creatorName: 'Jack Mehoff',
-        duration: 'one lsd trip',
+        duration: 4,
         level: 'space cadet',
         abstract: 'feel the rug burn',
         upVoteCount: 35
